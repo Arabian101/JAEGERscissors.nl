@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JAEGER — Premium Kappersscharen</title>
+  <meta name="description" content="JAEGER — premium kappersscharen van Japans kobalt- en damaststaal." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="grain">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 32 32">
+      <g fill="currentColor">
+        <path d="M16 3.5 17.4 16 16 28.5 14.6 16Z" transform="rotate(-20 16 16)" />
+        <path d="M16 3.5 17.4 16 16 28.5 14.6 16Z" transform="rotate(20 16 16)" />
+      </g>
+      <circle cx="16" cy="16" r="2.6" fill="#D4AF37" />
+    </symbol>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="header" id="header" data-testid="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" data-testid="header-logo-link"><svg class="mark"><use href="#mark" /></svg><span>JAEGER</span></a>
+      <nav class="nav">
+        <a href="#collectie" data-testid="nav-collectie">Collectie</a>
+        <a href="#ambacht" data-testid="nav-ambacht">Ambacht</a>
+        <a href="#service" data-testid="nav-service">Service</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="cartBtn" aria-label="Winkelwagen" data-testid="header-cart-button">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 7h12l-1 13H7L6 7Z" /><path d="M9 7a3 3 0 0 1 6 0" /></svg>
+          <span class="badge" id="cartCount" data-testid="cart-count-badge">0</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" data-testid="mobile-menu-button">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" data-testid="mobile-menu">
+    <a href="#collectie">Collectie</a>
+    <a href="#ambacht">Ambacht</a>
+    <a href="#service">Service</a>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" id="hero" data-testid="hero-section">
+      <div class="hero-spot" id="heroSpot"></div>
+      <p class="hero-word" id="heroWord" aria-hidden="true">JAEGER JAEGER</p>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow fade-in" style="--d:.2s">Professionele kappersscharen — N° 01</p>
+          <h1 class="hero-title" data-testid="hero-title">
+            <span class="line"><span style="--d:.3s">Staal dat</span></span>
+            <span class="line"><span style="--d:.42s"><em class="gold-text">luistert</em> naar</span></span>
+            <span class="line"><span style="--d:.54s">jouw hand.</span></span>
+          </h1>
+          <p class="hero-lead fade-in" style="--d:1s">Handgeslepen scharen van Japans kobalt- en damaststaal, gemaakt voor barbiers die elke snede voelen.</p>
+          <div class="hero-ctas fade-in" style="--d:1.15s">
+            <a href="#collectie" class="btn btn-gold" data-testid="hero-shop-button">Bekijk de collectie</a>
+            <button class="link-line" data-open="apex-damast-60" data-testid="hero-flagship-link">Het vlaggenschip <span></span></button>
+          </div>
+        </div>
+        <div class="hero-media-wrap">
+          <div class="hero-media" id="heroTilt">
+            <div class="arch">
+              <img src="img/apex.jpg" alt="JAEGER Apex damast kappersschaar" id="heroImg" data-testid="hero-image" />
+            </div>
+            <div class="hero-tag">
+              <p class="mono gold">Apex · 6.0″</p>
+              <p class="display">67 lagen damast</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container scroll-hint fade-in" style="--d:2s">↓ &nbsp;Scroll</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" data-testid="editorial-marquee">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </section>
+
+    <!-- COLLECTIE -->
+    <section class="container section" id="collectie" data-testid="collection-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal">De collectie — <span id="productCount">5</span></p>
+          <h2 class="h2 mask">
+            <span class="line"><span>Kies je</span></span>
+            <span class="line"><span style="--d:.12s"><em class="gold-text">verlengstuk.</em></span></span>
+          </h2>
+        </div>
+      </div>
+      <div class="filters reveal" id="filters" data-testid="category-filters"></div>
+      <div class="grid" id="productGrid" data-testid="product-grid"></div>
+    </section>
+
+    <!-- AMBACHT BENTO -->
+    <section class="container section" id="ambacht" data-testid="craft-bento-section">
+      <p class="eyebrow reveal">Het ambacht</p>
+      <h2 class="h2 mask">
+        <span class="line"><span>Gesmeed in lagen,</span></span>
+        <span class="line"><span style="--d:.12s"><em class="gold-text">geslepen met geduld.</em></span></span>
+      </h2>
+      <div class="bento">
+        <div class="tile tile-macro reveal" data-testid="bento-macro">
+          <img src="img/hero.jpg" alt="Macro van damast snijvlak" />
+          <div class="tile-macro-copy">
+            <p class="mono gold">01 — Snijvlak</p>
+            <p class="display big">Convex geslepen, met de hand gepolijst.</p>
+            <p class="muted">Een snijvlak zo fijn dat het haar niet duwt, maar doorsnijdt. Ideaal voor slice- en point-cutting.</p>
+          </div>
+        </div>
+        <div class="tile tile-a reveal" style="--d:.1s" data-testid="bento-hardness">
+          <p class="mono gold">02 — Hardheid</p>
+          <div><p class="stat">HRC 61</p><p class="muted">Kobaltrijk staal dat zijn scherpte maanden langer vasthoudt.</p></div>
+        </div>
+        <div class="tile tile-b reveal" style="--d:.2s" data-testid="bento-layers">
+          <p class="mono gold">03 — Lagen</p>
+          <div><p class="stat">67</p><p class="muted">Damast, gevouwen rond een VG-10 kern.</p></div>
+        </div>
+        <div class="tile tile-c reveal" style="--d:.3s" data-testid="bento-ergonomics">
+          <p class="mono gold">04 — Ergonomie</p>
+          <div><p class="stat">38 g</p><p class="muted">Offset- en crane-grepen die pols en schouder sparen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL + SERVICE -->
+    <section class="section" id="service" data-testid="editorial-section">
+      <div class="container editorial">
+        <div class="editorial-img" id="editorialImgWrap">
+          <img src="img/set.jpg" alt="JAEGER Atelier Duo in lederen etui" id="editorialImg" />
+        </div>
+        <div class="editorial-copy">
+          <p class="eyebrow reveal">Atelier Duo</p>
+          <blockquote class="quote mask">
+            <span class="line"><span>“Een goede schaar</span></span>
+            <span class="line"><span style="--d:.12s">merk je niet op.</span></span>
+            <span class="line"><span style="--d:.24s"><em class="gold-text">Je merkt alleen het resultaat.”</em></span></span>
+          </blockquote>
+          <div class="reveal" style="--d:.2s">
+            <p class="muted lead">Knipschaar en effileerschaar in titanium-goud, samen in een etui van volnerf leder. Het complete gereedschap voor wie elke dag achter de stoel staat.</p>
+            <button class="btn btn-outline" data-open="atelier-duo" data-testid="editorial-set-link">Ontdek de set</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="perks">
+          <div class="perk reveal"><p class="perk-ico">✦</p><p class="display">Gratis verzending</p><p class="muted">Vanaf € 150 binnen Nederland en België.</p></div>
+          <div class="perk reveal" style="--d:.08s"><p class="perk-ico">✦</p><p class="display">Persoonlijke gravure</p><p class="muted">Je naam in het blad, voor € 25.</p></div>
+          <div class="perk reveal" style="--d:.16s"><p class="perk-ico">✦</p><p class="display">14 dagen bedenktijd</p><p class="muted">Niet tevreden? Stuur hem ongebruikt terug.</p></div>
+          <div class="perk reveal" style="--d:.24s"><p class="perk-ico">✦</p><p class="display">Veilig betalen</p><p class="muted">iDEAL, creditcard of achteraf met Klarna.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" data-testid="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="display footer-title">Eerst weten wanneer een nieuwe serie verschijnt?</p>
+        <form class="newsletter" id="newsletter">
+          <input type="email" id="newsletterEmail" placeholder="jouw@email.nl" data-testid="newsletter-email-input" />
+          <button aria-label="Aanmelden" data-testid="newsletter-submit-button">→</button>
+        </form>
+      </div>
+      <div class="footer-col">
+        <p class="mono gold">Winkel</p>
+        <a href="#collectie" data-filter-link="">Alle scharen</a>
+        <a href="#collectie" data-filter-link="sets">Sets</a>
+        <a href="#collectie" data-filter-link="linkshandig">Linkshandig</a>
+      </div>
+      <div class="footer-col">
+        <p class="mono gold">Klantenservice</p>
+        <p>[e-mailadres]</p>
+        <p>[telefoonnummer]</p>
+        <p>KvK [nummer]</p>
+      </div>
+    </div>
+    <div class="container"><p class="footer-word" aria-hidden="true">JAEGER</p></div>
+    <div class="container footer-bottom">
+      <span><svg class="mark sm"><use href="#mark" /></svg> © <span id="year"></span> JAEGER</span>
+      <span>Demo-webshop · prijzen incl. btw</span>
+    </div>
+  </footer>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" data-testid="overlay"></div>
+
+  <!-- CART DRAWER -->
+  <aside class="drawer" id="drawer" data-lenis-prevent data-testid="cart-drawer">
+    <div class="drawer-head">
+      <p class="display">Winkelwagen <span class="mono muted" id="drawerCount">(0)</span></p>
+      <button class="icon-btn close" data-close aria-label="Sluiten" data-testid="cart-close-button">✕</button>
+    </div>
+    <div class="ship">
+      <p id="shipText" data-testid="free-shipping-progress"></p>
+      <div class="ship-bar"><div id="shipBar"></div></div>
+    </div>
+    <ul class="drawer-list" id="cartList"></ul>
+    <div class="drawer-foot">
+      <div class="row"><span class="mono muted">Subtotaal</span><span class="display total" id="cartSubtotal" data-testid="cart-subtotal">€ 0,00</span></div>
+      <button class="btn btn-gold full" id="toCheckout" data-testid="cart-checkout-button">Afrekenen</button>
+    </div>
+  </aside>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal" id="productModal" data-lenis-prevent data-testid="product-modal">
+    <button class="icon-btn close modal-close" data-close aria-label="Sluiten" data-testid="product-modal-close">✕</button>
+    <div class="modal-grid" id="productBody"></div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal" id="checkoutModal" data-lenis-prevent data-testid="checkout-modal">
+    <button class="icon-btn close modal-close" data-close aria-label="Sluiten" data-testid="checkout-modal-close">✕</button>
+    <div id="checkoutBody"></div>
+  </div>
+
+  <div class="toasts" id="toasts"></div>
+
+  <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
